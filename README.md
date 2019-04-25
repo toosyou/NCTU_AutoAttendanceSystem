@@ -5,7 +5,7 @@
 1. Press F12 to open the chrome console.
 1. Click into 「填寫 / 修改 (工作/服務) 日誌」.
 1. Find your right project id by observe the html in the console. It might be something like  
-`<option value="108TXXX^21XXXX^^96XXX"> 108: 2019-XX-XX~2019-XX-XX -  請核單號:XXXXX </option>`,
+`<option value="108TXXX^21XXXX^^96XXX"> 108TXXX: 2019-XX-XX~2019-XX-XX -  請核單號:XXXXX </option>`,
   then the project id you need is ```108TXXX^21XXXX^^96XXX```.
 1. Modify the following script and copy it to the console.
 
