@@ -59,7 +59,7 @@ window.confirm = () => true;
         }
 
         date += 1;
-        weekday = (weekday + 1) % 7 + 1;
+        weekday = (weekday + 1) % 8 + parseInt((weekday + 1) / 8)
     }
     document.querySelector("#node_level-1-2").click(); // switch
     await sleep(2000);
