@@ -5,7 +5,7 @@
 1. Press F12 to open the chrome console.
 1. Click into 「填寫 / 修改 (工作/服務) 日誌」.
 1. Find your right project id by observing the html in the console. It might be something like  
-`<option value="108TXXX^21XXXX^^96XXX"> 108TXXX: 2019-XX-XX~2019-XX-XX -  請核單號:XXXXX </option>`,
+`<option value="108TXXX^21XXXX^^96XXX"> 108TXXX: 2020-XX-XX~2020-XX-XX -  請核單號:XXXXX </option>`,
   then the project id you need is ```108TXXX^21XXXX^^96XXX```.
 1. Modify the following script and copy it to the console.
 
@@ -32,20 +32,20 @@ window.confirm = () => true;
 
         if(weekday >= 1 && weekday <= 5){
             if(time_remain >= 4){
-                start_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
-                end_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "21:30:00";
+                start_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
+                end_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "21:30:00";
                 time_remain -= 4;
             }else if(time_remain >= 1.5) {
-                start_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
-                end_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "19:00:00";
+                start_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
+                end_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "19:00:00";
                 time_remain -= 1.5;
             }else if(time_remain >= 1){
-                start_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
-                end_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "18:30:00";
+                start_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
+                end_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "18:30:00";
                 time_remain -= 1;
             }else if(time_remain >= 0.5){
-                start_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
-                end_time = "2019-" + month + "-" + String(date).padStart(2, "0") + " " +  "18:00:00";
+                start_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "17:30:00";
+                end_time = "2020-" + month + "-" + String(date).padStart(2, "0") + " " +  "18:00:00";
                 time_remain -= 0.5;
             }
             console.log(time_remain)
