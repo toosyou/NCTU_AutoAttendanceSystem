@@ -3,9 +3,10 @@
 1. Login to [NCTU Attendance System](https://pt-attendance.nctu.edu.tw/)
 2. Press `F12` to open the chrome console.
 3. Copy the following script into console and press Enter.
-4. Wa-la! All the records are generated.
-5. Remember to **double check and submit** them in 「產生（簽到 / 服務）資料」 tag.
-6. NOTE: Although I encounter no problems, you should always use this **AT YOUR OWN RISK**.
+4. Choose the correct project in the dropdown list, press `2. 自動產生`.
+5. Wa-la! All the records are generated.
+6. Remember to **double check and submit** them in 「產生（簽到 / 服務）資料」 tag.
+7. NOTE: Although I encounter no problems, you should always use this **AT YOUR OWN RISK**.
 
 ```javascript
 (async () => {
