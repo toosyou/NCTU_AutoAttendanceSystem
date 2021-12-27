@@ -39,15 +39,32 @@
 
         generate_records(project_name, start_date, end_date);
     }
+    
+    function get_worklists(){
+        return $.ajax({
+            async: false,
+            url: 'ajaxfunction.php',
+            cache: false,
+            dataType: 'json',
+            type: 'POST',
+            async: !1,
+            data:
+            {
+                actionFunction: 'getWorkLists'
+            }
+        }).responseJSON;
+     }
 
     function get_total_time(project_name){
         table = document.querySelector("#showWorkLists > div > div > table");
-        minor_project_name = project_name.split("^")[0];
+        worklists = get_worklists();
+        
+        bugetno = project_name.split("^")[0];
+        SerialNo = project_name.split("^")[3];
 
-        for(var i =0; row = table.rows[i]; i++){
-            if(row.cells[0].textContent == minor_project_name){
-                return parseInt(row.cells[5].textContent);
-            }
+        for(var i=0; i<worklists.length; ++i){
+            if(worklists[i]["bugetno"] == bugetno && worklists[i]["SerialNo"] == SerialNo)
+                return parseInt(worklists[i]["LimitPerMonth"]);
         }
         return -1;
     }
