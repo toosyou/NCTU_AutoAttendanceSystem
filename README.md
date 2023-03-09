@@ -109,7 +109,7 @@
                 if(checkOverWorkTime() != "Y"){time_remain = 0; break;} // finished
 
                 addRecord(); // submit
-                await sleep(500);
+                await sleep(00);
 
                 // progress bar
                 var progress = parseInt((total_time - time_remain) / total_time * 100);
