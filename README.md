@@ -36,8 +36,9 @@
         var date_string = document.querySelector("#pno").options[project_index].text;
         var start_date = new Date(date_string.split(" ")[1].split("~")[0]);
         var end_date = new Date(date_string.split("~")[1].split(" ")[0]);
+        var work_content = $('#workdata4').val();
 
-        generate_records(project_name, start_date, end_date);
+        generate_records(project_name, start_date, end_date, work_content);
     }
     
     function get_worklists(){
@@ -69,7 +70,7 @@
         return -1;
     }
 
-    async function generate_records(project_name, start_date, end_date){
+    async function generate_records(project_name, start_date, end_date, work_content){
         var time_remain = get_total_time(project_name) + 0.5;
         var total_time = time_remain;
         var now = new Date(start_date.getTime()); // copy
@@ -100,6 +101,7 @@
                 document.querySelector("#pno").value = project_name;
                 document.querySelector("#datetimepicker1").value = start_time;
                 document.querySelector("#datetimepicker2").value = end_time;
+                $('#workdata4').val(work_content);
 
                 // perform checks
                 if(CheckClass() == "N") continue; // there are classes in the time section
@@ -107,6 +109,7 @@
                 if(checkOverWorkTime() != "Y"){time_remain = 0; break;} // finished
 
                 addRecord(); // submit
+                await sleep(500);
 
                 // progress bar
                 var progress = parseInt((total_time - time_remain) / total_time * 100);
