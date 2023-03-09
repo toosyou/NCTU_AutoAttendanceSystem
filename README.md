@@ -1,12 +1,13 @@
 # NCTU AutoAttendanceSystem
 
-1. Login to [NCTU Attendance System](https://pt-attendance.nctu.edu.tw/)
-2. Press `F12` to open the chrome console.
-3. Copy the following script into console and press Enter.
-4. Choose the correct project in the dropdown list, press `2. 自動產生`.
-5. Wa-la! All the records are generated.
-6. Remember to **double check and submit** them in 「產生（簽到 / 服務）資料」 tag.
-7. NOTE: Although I encounter no problems, you should always use this **AT YOUR OWN RISK**.
+Instructions for Automatically Generating Attendance Records in NCTU Attendance System:
+
+1. Log in to the [NCTU Attendance System](https://pt-attendance.nctu.edu.tw/).
+2. Open the Chrome Console by pressing `F12`.
+3. Copy the script provided below and paste it into the console. Then, press Enter.
+4. Select the correct project from the dropdown list and press "2. 自動產生" to generate the attendance records.
+5. Check the generated records carefully and submit them under the "產生（簽到 / 服務）資料" tag.
+* Note: While I have not encountered any issues using this method, please be aware that you are using it at your own risk.
 
 ```javascript
 (async () => {
