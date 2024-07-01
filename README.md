@@ -58,17 +58,18 @@ Instructions for Automatically Generating Attendance Records in NCTU Attendance 
      }
 
     function get_total_time(project_name){
-        table = document.querySelector("#showWorkLists > div > div > table");
         worklists = get_worklists();
         
         bugetno = project_name.split("^")[0];
         SerialNo = project_name.split("^")[3];
 
+        times = [];
+
         for(var i=0; i<worklists.length; ++i){
             if(worklists[i]["bugetno"] == bugetno && worklists[i]["SerialNo"] == SerialNo)
-                return parseInt(worklists[i]["LimitPerMonth"]);
+                times.push(parseInt(worklists[i]["LimitPerMonth"]));
         }
-        return -1;
+        return Math.max(...times);
     }
 
     async function generate_records(project_name, start_date, end_date, work_content){
